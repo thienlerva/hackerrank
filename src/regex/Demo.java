@@ -8,6 +8,8 @@ public class Demo {
 
         System.out.println(Pattern.matches("\\w+","acb"));
 
+        System.out.println("abcd".matches(".*bc.*"));
+
         System.out.println((int) 'b');
 
         for (char i = 'a'; i <= 'z'; i++) {

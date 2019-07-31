@@ -1,5 +1,7 @@
 package datastructure;
 
+import java.util.Arrays;
+
 public class ArrayList {
 
     Object[] buffer;
@@ -46,7 +48,7 @@ public class ArrayList {
 
         Object remove = buffer[pos];
 
-        for (int i = 1; i < currentSize; i++) {
+        for (int i = pos + 1; i < currentSize; i++) {
             buffer[i-1] = buffer[i];
         }
         currentSize--;
@@ -69,5 +71,15 @@ public class ArrayList {
         arrayList.addLast(5);
         arrayList.set(0, 10);
         System.out.println(arrayList.get(0));
+
+        int[] a = {1,2,3};
+        int[] b = new int[6];
+        for (int i = 0; i < a.length; i++) {
+            b[i]= a[i];
+        }
+        a = b;
+        System.out.println(Arrays.toString(a));
+
+
     }
 }
